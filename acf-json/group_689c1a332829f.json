@@ -1,0 +1,121 @@
+{
+    "key": "group_689c1a332829f",
+    "title": "More Product options",
+    "fields": [
+        {
+            "key": "field_689c1a342719a",
+            "label": "Scoville Rating",
+            "name": "scoville_rating",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "Enter the Scoville Heat Unit (SHU) rating for this hot sauce. This measures the heat level.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": 0,
+            "max": 100000,
+            "allow_in_bindings": 0,
+            "placeholder": "e.g. 5000",
+            "step": "",
+            "prepend": "",
+            "append": "SHU"
+        },
+        {
+            "key": "field_689c1a712719b",
+            "label": "Heat Level",
+            "name": "heat_level",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Select the general heat category for this sauce.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "mild": "Mild",
+                "medium": "Medium", 
+                "hot": "Hot",
+                "extreme": "Extreme"
+            },
+            "default_value": "hot",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 1,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_68a27e75f03e3",
+            "label": "Ingredients",
+            "name": "ingredients",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "List the main ingredients used in this hot sauce. This will be displayed on the product page.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "rows": 4,
+            "placeholder": "e.g. Habanero peppers, vinegar, garlic, onions, salt",
+            "new_lines": "br"
+        },
+        {
+            "key": "field_68a27e82f03e4",
+            "label": "Usage Instructions",
+            "name": "usage_instructions",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Provide serving suggestions and usage instructions for customers.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "rows": 4,
+            "placeholder": "e.g. Perfect for tacos, eggs, pizza, or any dish that needs a kick of heat!",
+            "new_lines": "br"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "product"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Additional product information specific to hot sauce products including heat ratings, ingredients, and usage instructions.",
+    "show_in_rest": 0,
+    "modified": 1703097600
+}
