@@ -338,7 +338,7 @@ When updating WooCommerce:
 
 ## Credits
 
-**Theme Developer:** Claudia (AI Assistant)
+**Theme Developer:** Spring in Alaska (www.springinalaska.com.au) with the assistance of Claudia
 **Built For:** Hot Sauce Co
 **WordPress Version:** 6.7+
 **WooCommerce Version:** 9.8.0+
