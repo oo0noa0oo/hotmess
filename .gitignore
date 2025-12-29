@@ -1,0 +1,51 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Thumbnails
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Claude Code
+.claude/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# Node modules (if using build tools)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Compiled/minified files (if applicable)
+*.min.css
+*.min.js
+*.map
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Environment files
+.env
+.env.local
+.env.development
+.env.production

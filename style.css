@@ -1,0 +1,45 @@
+/*
+Theme Name: Hot Mess - SIA
+Description: A bold, modern WordPress theme designed for Hot Sauce Co - featuring premium typography, WooCommerce integration, and custom ACF fields for product management.
+Version: 1.2.1
+Author: Sring in Alaska
+Author URI: https://www.springinalaska.com.au
+Text Domain: hotsauce-theme
+Domain Path: /languages
+Requires at least: 6.0
+Tested up to: 6.4
+Requires PHP: 8.0
+License: GPL v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+
+Hot Sauce Co WordPress Theme
+Copyright (C) 2024, Hot Sauce Co - support@hotsauce.co
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program. If not, see <https://www.gnu.org/licenses/>.
+*/
+
+/**
+ * Theme supports WooCommerce and requires Advanced Custom Fields (ACF)
+ * 
+ * Features:
+ * - Custom typography with KG Bless Your Heart and Big Noodle Titling fonts
+ * - Full WooCommerce integration with custom styling
+ * - ACF-powered homepage sections and product details
+ * - Mobile-responsive design
+ * - Performance optimized with font preloading
+ * - Accessibility compliant
+ */
+
+/* Import main styles - keep this file minimal for WordPress requirements */
+@import url('./assets/css/main.css');
