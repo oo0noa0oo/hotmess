@@ -1,5 +1,9 @@
 <?php
 
+// Hide PHP deprecation warnings from plugins
+error_reporting(E_ALL & ~E_DEPRECATED);
+ini_set('display_errors', '0');
+
 // Required includes
 require_once(get_template_directory() . '/includes/acf.php');
 
@@ -21,18 +25,38 @@ add_action('init', function() {
 // Theme support and setup
 function hotsauce_theme_setup() {
     add_theme_support('woocommerce');
-    add_theme_support('wc-product-gallery-slider');
     add_theme_support('post-thumbnails');
     add_theme_support('title-tag');
 }
 add_action('after_setup_theme', 'hotsauce_theme_setup');
 
-// Remove zoom and lightbox functionality
+// Remove all gallery features (zoom, lightbox, slider)
 function hotsauce_remove_gallery_features() {
     remove_theme_support('wc-product-gallery-zoom');
     remove_theme_support('wc-product-gallery-lightbox');
+    remove_theme_support('wc-product-gallery-slider');
 }
 add_action('after_setup_theme', 'hotsauce_remove_gallery_features', 20);
+
+// Disable WooCommerce gallery scripts for stacked layout
+function hotsauce_disable_gallery_scripts() {
+    if (is_product()) {
+        wp_dequeue_script('wc-single-product');
+        wp_dequeue_script('zoom');
+        wp_dequeue_script('flexslider');
+        wp_dequeue_script('photoswipe');
+        wp_dequeue_script('photoswipe-ui-default');
+    }
+}
+add_action('wp_enqueue_scripts', 'hotsauce_disable_gallery_scripts', 99);
+
+// Remove duplicate product title and other elements from WooCommerce single product page
+function hotsauce_remove_product_elements() {
+    remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_title', 5);
+    remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20);
+    remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40);
+}
+add_action('init', 'hotsauce_remove_product_elements');
 
 // Enhanced script enqueuing with proper dependencies
 function hotsauce_enqueue_assets() {
@@ -258,28 +282,28 @@ function hotsauce_update_cart_item_quantity() {
     ]);
 }
 
-// Product display functions
-add_action('woocommerce_single_product_summary', 'hotsauce_display_custom_product_fields', 25);
-function hotsauce_display_custom_product_fields() {
-    global $product;
-    
-    $heat_level = get_field('heat_level', $product->get_id());
-    $scoville = get_field('scoville_rating', $product->get_id());
-    
-    if ($heat_level || $scoville) {
-        echo '<div class="custom-product-meta">';
-        
-        if ($heat_level) {
-            echo '<span class="heat-level">Heat Level: <span class="heat-badge heat-' . esc_attr($heat_level) . '">' . esc_html(ucfirst($heat_level)) . '</span></span>';
-        }
-        
-        if ($scoville) {
-            echo '<span class="scoville">Scoville: <span class="scoville-rating">' . esc_html(number_format($scoville)) . ' SHU</span></span>';
-        }
-        
-        echo '</div>';
-    }
-}
+// Product display functions - DISABLED (heat badge now on image only)
+// add_action('woocommerce_single_product_summary', 'hotsauce_display_custom_product_fields', 25);
+// function hotsauce_display_custom_product_fields() {
+//     global $product;
+//
+//     $heat_level = get_field('heat_level', $product->get_id());
+//     $scoville = get_field('scoville_rating', $product->get_id());
+//
+//     if ($heat_level || $scoville) {
+//         echo '<div class="custom-product-meta">';
+//
+//         if ($heat_level) {
+//             echo '<span class="heat-level">Heat Level: <span class="heat-badge heat-' . esc_attr($heat_level) . '">' . esc_html(ucfirst($heat_level)) . '</span></span>';
+//         }
+//
+//         if ($scoville) {
+//             echo '<span class="scoville">Scoville: <span class="scoville-rating">' . esc_html(number_format($scoville)) . ' SHU</span></span>';
+//         }
+//
+//         echo '</div>';
+//     }
+// }
 
 // Custom product tabs
 add_filter('woocommerce_product_tabs', 'hotsauce_custom_product_tabs');

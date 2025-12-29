@@ -1318,12 +1318,68 @@ a:focus {
     
     .mini-cart-quantity {
 		width: 50px;
-		padding: 0.25rem;
+		padding: 0.45rem 0.65rem 0.45rem .25rem;
 		border: 1px solid var(--color-border);
 		text-align: center;
 		font-size: 0.9rem;
 	}
-    
+
+	/* Cart drawer quantity wrapper */
+	.cart-item .quantity-wrapper {
+		position: relative;
+		display: inline-flex;
+		align-items: center;
+	}
+
+	/* Hide default number input spinners in cart drawer */
+	.cart-drawer .mini-cart-quantity::-webkit-inner-spin-button,
+	.cart-drawer .mini-cart-quantity::-webkit-outer-spin-button {
+		-webkit-appearance: none;
+		appearance: none;
+		margin: 0;
+	}
+
+	.cart-drawer .mini-cart-quantity {
+		-moz-appearance: textfield;
+		appearance: textfield;
+	}
+
+	/* Cart drawer quantity buttons */
+	.cart-drawer .qty-btn {
+		position: absolute;
+		right: 0;
+		width: 15px;
+		height: 15px;
+		background: transparent;
+		border: none;
+		cursor: pointer;
+		font-size: 12px;
+		font-weight: normal;
+		line-height: 1;
+		padding: 0 12px 0 0px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		z-index: 10;
+		outline: none;
+	}
+
+	.cart-drawer .qty-btn:hover,
+	.cart-drawer .qty-btn:active,
+	.cart-drawer .qty-btn:focus {
+		background: transparent;
+		border: none;
+		outline: none;
+	}
+
+	.cart-drawer .qty-btn.plus {
+		top: 2px;
+	}
+
+	.cart-drawer .qty-btn.minus {
+		bottom: 2px;
+	}
+
     .cart-item-subtotal {
         font-weight: 600;
         color: var(--color-accent);

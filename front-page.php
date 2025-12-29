@@ -129,7 +129,7 @@ get_header(); ?>
             foreach ($products as $product) :
                 $product_id = $product->get_id();
                 $product_name = $product->get_name();
-                $product_image = wp_get_attachment_image_src($product->get_image_id(), 'medium');
+                $product_image = wp_get_attachment_image_src($product->get_image_id(), 'large');
                 $product_url = get_permalink($product_id);
                 
                 // Get ACF fields for additional product info

@@ -10,14 +10,15 @@
         
         init: function() {
             console.log('🌶️ Initializing Hot Sauce WooCommerce...');
-            
+
             // Initialize core features
             this.initCartDrawer();
             this.initAddToCart();
             this.initCartUpdates();
             this.initCheckoutEnhancements();
+            this.initCustomQuantityButtons();
             this.updateCartCount();
-            
+
             // Debug info
             this.debugInfo();
         },
@@ -156,7 +157,7 @@
                     if (response.success) {
                         $('#cartItems').html(response.data.contents);
                         $('#cartTotal').html(response.data.total);
-                        
+
                         // Get item count - try multiple sources
                         let itemCount = 0;
                         if (response.data.count !== undefined) {
@@ -167,9 +168,12 @@
                             // Fallback: count items in the DOM
                             itemCount = $('#cartItems .cart-item, #cartItems .mini_cart_item').length;
                         }
-                        
+
                         console.log('Cart item count:', itemCount);
                         self.updateCartTitle(itemCount);
+
+                        // Add quantity buttons to cart items
+                        self.addCartQuantityButtons();
                     } else {
                         $('#cartItems').html('<div class="cart-empty">Your cart is empty</div>');
                         self.updateCartTitle(0);
@@ -456,6 +460,128 @@
         },
 
         /**
+         * Initialize custom quantity +/- buttons
+         */
+        initCustomQuantityButtons: function() {
+            console.log('🔢 Initializing custom quantity buttons');
+
+            // Add buttons to single product pages
+            if ($('body').hasClass('single-product')) {
+                this.addQuantityButtons('.single-product .quantity');
+            }
+
+            // Add buttons to cart page
+            if ($('body').hasClass('woocommerce-cart')) {
+                this.addQuantityButtons('.woocommerce-cart .quantity');
+            }
+
+            // Add buttons to cart drawer (will be called when cart loads)
+            this.addCartDrawerQuantityButtons();
+        },
+
+        /**
+         * Add quantity buttons to specific selector
+         */
+        addQuantityButtons: function(selector) {
+            $(selector).each(function() {
+                const $quantity = $(this);
+                const $input = $quantity.find('input[type="number"]');
+
+                // Skip if buttons already added or no input found
+                if ($quantity.find('.qty-btn').length || !$input.length) return;
+
+                // Create + and - buttons
+                const $plusBtn = $('<button type="button" class="qty-btn plus">+</button>');
+                const $minusBtn = $('<button type="button" class="qty-btn minus">−</button>');
+
+                // Append buttons to quantity container
+                $quantity.append($plusBtn);
+                $quantity.append($minusBtn);
+
+                // Handle + button click
+                $plusBtn.on('click', function(e) {
+                    e.preventDefault();
+                    const currentVal = parseInt($input.val()) || 1;
+                    const max = parseInt($input.attr('max')) || 999;
+
+                    if (currentVal < max) {
+                        $input.val(currentVal + 1).trigger('change');
+                    }
+                });
+
+                // Handle - button click
+                $minusBtn.on('click', function(e) {
+                    e.preventDefault();
+                    const currentVal = parseInt($input.val()) || 1;
+                    const min = parseInt($input.attr('min')) || 0;
+
+                    if (currentVal > min) {
+                        $input.val(currentVal - 1).trigger('change');
+                    }
+                });
+            });
+        },
+
+        /**
+         * Add quantity buttons to cart drawer items
+         */
+        addCartDrawerQuantityButtons: function() {
+            // This is kept for compatibility but functionality moved to addCartQuantityButtons
+            this.addCartQuantityButtons();
+        },
+
+        /**
+         * Add quantity buttons to cart drawer items (called after cart loads)
+         */
+        addCartQuantityButtons: function() {
+            console.log('🔢 Adding cart quantity buttons');
+
+            $('.mini-cart-quantity').each(function() {
+                const $input = $(this);
+
+                // Skip if already wrapped
+                if ($input.parent().hasClass('quantity-wrapper')) return;
+
+                // Wrap input in quantity-wrapper
+                $input.wrap('<div class="quantity-wrapper"></div>');
+                const $wrapper = $input.parent();
+
+                // Skip if buttons already added
+                if ($wrapper.find('.qty-btn').length) return;
+
+                // Create + and - buttons
+                const $plusBtn = $('<button type="button" class="qty-btn plus">+</button>');
+                const $minusBtn = $('<button type="button" class="qty-btn minus">−</button>');
+
+                // Append buttons to wrapper
+                $wrapper.append($plusBtn);
+                $wrapper.append($minusBtn);
+
+                // Handle + button click
+                $plusBtn.on('click', function(e) {
+                    e.preventDefault();
+                    const currentVal = parseInt($input.val()) || 0;
+                    const max = parseInt($input.attr('max')) || 999;
+
+                    if (currentVal < max) {
+                        $input.val(currentVal + 1).trigger('change');
+                    }
+                });
+
+                // Handle - button click
+                $minusBtn.on('click', function(e) {
+                    e.preventDefault();
+                    const currentVal = parseInt($input.val()) || 0;
+                    const min = parseInt($input.attr('min')) || 0;
+
+                    if (currentVal > min) {
+                        $input.val(currentVal - 1).trigger('change');
+                    }
+                });
+            });
+        },
+
+        /**
          * Utility function to show notifications
          */
         showNotification: function(message, type = 'success') {
@@ -465,20 +591,20 @@
                     <button class="notification-close">&times;</button>
                 </div>
             `;
-            
+
             $('body').append(notificationHTML);
-            
+
             const $notification = $('.hotsauce-notification').last();
-            
+
             setTimeout(function() {
                 $notification.addClass('show');
             }, 100);
-            
+
             // Auto remove after 5 seconds
             setTimeout(function() {
                 $notification.remove();
             }, 5000);
-            
+
             // Manual close
             $notification.find('.notification-close').on('click', function() {
                 $notification.remove();

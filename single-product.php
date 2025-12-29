@@ -7,31 +7,42 @@
                 <?php do_action('woocommerce_before_single_product_summary'); ?>
             </div>
             <div class="product-info">
-                <h1 class="product-title"><?php the_title(); ?></h1>
-                
-                <?php 
+                <h1><?php the_title(); ?></h1>
+
+                <?php
+                // Get ACF heat level and scoville for heat intensity display
+                global $product;
                 $heat_level = get_field('heat_level');
                 $scoville = get_field('scoville_rating');
+
+                // Calculate heat intensity
+                if ($scoville) {
+                    $heat_intensity = get_heat_intensity_from_scoville($scoville);
+                } else {
+                    $heat_intensity = get_heat_intensity_level($heat_level);
+                }
                 ?>
-                
-                <div class="product-meta">
-                    <?php if ($heat_level) : ?>
-                        <span class="heat-badge heat-<?php echo strtolower($heat_level); ?>">
-                            <?php echo $heat_level; ?> HEAT
-                        </span>
-                    <?php endif; ?>
-                    
-                    <?php if ($scoville) : ?>
-                        <span class="scoville-rating">
-                            <?php echo number_format($scoville); ?> SHU
-                        </span>
-                    <?php endif; ?>
+
+                <?php if ($heat_level || $scoville) : ?>
+                <div class="heat-intensity-section visible">
+                    <label>HEAT INTENSITY</label>
+                    <div class="heat-intensity-display">
+                        <div class="heat-dots">
+                            <?php echo display_heat_intensity($heat_intensity); ?>
+                        </div>
+                        <?php if ($scoville) : ?>
+                            <div class="scoville-display">
+                                <i class="fas fa-fire"></i> <?php echo number_format($scoville); ?> SCOVILLE
+                            </div>
+                        <?php endif; ?>
+                    </div>
                 </div>
-                
+                <?php endif; ?>
+
                 <div class="product-description">
                     <?php the_content(); ?>
                 </div>
-                
+
                 <?php do_action('woocommerce_single_product_summary'); ?>
             </div>
         </div>
