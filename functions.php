@@ -27,6 +27,9 @@ function hotsauce_theme_setup() {
     add_theme_support('woocommerce');
     add_theme_support('post-thumbnails');
     add_theme_support('title-tag');
+
+    // Register custom square image size for product grid
+    add_image_size('product-square', 600, 600, true); // 600x600 hard crop
 }
 add_action('after_setup_theme', 'hotsauce_theme_setup');
 
