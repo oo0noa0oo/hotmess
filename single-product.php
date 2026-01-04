@@ -39,11 +39,19 @@
                 </div>
                 <?php endif; ?>
 
+                <div class="sticky-wrapper">
+                    <div class="product-price-wrapper">
+                        <?php woocommerce_template_single_price(); ?>
+                    </div>
+
+                    <div class="product-cart-wrapper">
+                        <?php woocommerce_template_single_add_to_cart(); ?>
+                    </div>
+                </div>
+
                 <div class="product-description">
                     <?php the_content(); ?>
                 </div>
-
-                <?php do_action('woocommerce_single_product_summary'); ?>
             </div>
         </div>
         

@@ -58,17 +58,19 @@ function hotsauce_remove_product_elements() {
     remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_title', 5);
     remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20);
     remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40);
+    remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 10);
+    remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30);
 }
 add_action('init', 'hotsauce_remove_product_elements');
 
 // Enhanced script enqueuing with proper dependencies
 function hotsauce_enqueue_assets() {
     // Main styles
-    wp_enqueue_style('hotsauce-main', get_template_directory_uri() . '/assets/css/main.css', [], '1.1.1');
-    wp_enqueue_style('hotsauce-woocommerce', get_template_directory_uri() . '/assets/css/woocommerce.css', ['hotsauce-main'], '1.1.1');
-    
+    wp_enqueue_style('hotsauce-main', get_template_directory_uri() . '/assets/css/main.css', [], '1.2.3');
+    wp_enqueue_style('hotsauce-woocommerce', get_template_directory_uri() . '/assets/css/woocommerce.css', ['hotsauce-main'], '1.2.3');
+
     // Main JavaScript
-    wp_enqueue_script('hotsauce-main', get_template_directory_uri() . '/assets/js/main.js', ['jquery'], '1.1.1', true);
+    wp_enqueue_script('hotsauce-main', get_template_directory_uri() . '/assets/js/main.js', ['jquery'], '1.2.3', true);
     
     // WooCommerce integration
     if (class_exists('WooCommerce')) {

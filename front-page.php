@@ -145,30 +145,34 @@ get_header(); ?>
                 }
             ?>
                 <div class="product-card" data-scoville="<?php echo esc_attr($scoville); ?>">
-                    <div class="product-image">
-                        <?php if ($product_image) : ?>
-                            <img src="<?php echo esc_url($product_image[0]); ?>" alt="<?php echo esc_attr($product_name); ?>" />
-                        <?php else : ?>
-                            <div class="product-placeholder">??</div>
-                        <?php endif; ?>
-                        
-                        <div class="product-price">
-                            <?php if ($product->is_type('variable')) : ?>
-                                FROM <?php echo wc_price($product->get_variation_price('min')); ?>
+                    <a href="<?php echo esc_url($product_url); ?>" class="product-link">
+                        <div class="product-image">
+                            <?php if ($product_image) : ?>
+                                <img src="<?php echo esc_url($product_image[0]); ?>" alt="<?php echo esc_attr($product_name); ?>" />
                             <?php else : ?>
-                                <?php echo $product->get_price_html(); ?>
+                                <div class="product-placeholder">??</div>
+                            <?php endif; ?>
+
+                            <div class="product-price">
+                                <?php if ($product->is_type('variable')) : ?>
+                                    FROM <?php echo wc_price($product->get_variation_price('min')); ?>
+                                <?php else : ?>
+                                    <?php echo $product->get_price_html(); ?>
+                                <?php endif; ?>
+                            </div>
+
+                            <?php if ($heat_level) : ?>
+                                <div class="product-heat heat-badge heat-<?php echo esc_attr($heat_level); ?>">
+                                    <?php echo esc_html(strtoupper($heat_level)); ?>
+                                </div>
                             <?php endif; ?>
                         </div>
-                        
-                        <?php if ($heat_level) : ?>
-                            <div class="product-heat heat-badge heat-<?php echo esc_attr($heat_level); ?>">
-                                <?php echo esc_html(strtoupper($heat_level)); ?>
-                            </div>
-                        <?php endif; ?>
-                    </div>
-                    
+                    </a>
+
                     <div class="product-content">
-                        <h3 class="product-title"><?php echo esc_html($product_name); ?></h3>
+                        <a href="<?php echo esc_url($product_url); ?>" class="product-link">
+                            <h3 class="product-title"><?php echo esc_html($product_name); ?></h3>
+                        </a>
                         <p class="product-description"><?php echo wp_trim_words($product->get_short_description(), 25); ?></p>
 
                         <?php if ($variations && count($variations) > 0) : ?>
