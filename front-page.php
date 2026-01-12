@@ -278,6 +278,41 @@ get_header(); ?>
         </div>
     </section>
 
+    <!-- Mission Section -->
+    <section class="mission-section" id="mission">
+        <div class="mission-content">
+            <?php
+            // Get mission section fields - all editable through ACF
+            $mission_badge = get_field('mission_badge') ?: 'OUR MISSION';
+            $mission_title = get_field('mission_title') ?: 'Making a<br /><span class="accent">Difference</span>';
+            $mission_nonprofit_text = get_field('mission_nonprofit_text') ?: 'We are a not-for-profit business dedicated to creating positive change through every bottle we sell.';
+            $mission_org_name = get_field('mission_org_name') ?: 'fullStop Australia';
+            $mission_org_url = get_field('mission_org_url') ?: 'https://fullstop.org.au/';
+            $mission_donation_heading = get_field('mission_donation_heading') ?: '100% of profits go to';
+            $mission_org_description = get_field('mission_org_description') ?: 'fullStop Australia is a leading organization working to end domestic, family and sexual violence. They provide vital support services, advocacy, and education to create safer communities for all Australians.';
+            $mission_yearly_text = get_field('mission_yearly_text') ?: 'Each year, we carefully select a new organization to support, ensuring our impact reaches various causes that matter to our community.';
+            ?>
+
+            <div class="mission-badge">
+                <span><?php echo $mission_badge; ?></span>
+            </div>
+            <h2 class="mission-title">
+                <?php echo $mission_title; ?>
+            </h2>
+
+            <div class="mission-text">
+                <p class="mission-nonprofit"><?php echo $mission_nonprofit_text; ?></p>
+
+                <div class="mission-donation">
+                    <h3><?php echo $mission_donation_heading; ?> <a href="<?php echo esc_url($mission_org_url); ?>" target="_blank" rel="noopener noreferrer" class="mission-org-link"><span class="accent"><?php echo $mission_org_name; ?></span></a></h3>
+                    <p><?php echo $mission_org_description; ?></p>
+                </div>
+
+                <p class="mission-yearly"><?php echo $mission_yearly_text; ?></p>
+            </div>
+        </div>
+    </section>
+
     <!-- About Section -->
     <section class="about-section" id="about">
         <div class="about-grid">

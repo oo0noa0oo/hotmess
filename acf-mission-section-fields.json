@@ -1,0 +1,659 @@
+[
+    {
+        "key": "group_68a2b74b2a6f9",
+        "title": "Homepage Content",
+        "fields": [
+            {
+                "key": "field_68a2e4b498da4",
+                "label": "Hero Section",
+                "name": "",
+                "aria-label": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "left",
+                "endpoint": 0,
+                "selected": 0
+            },
+            {
+                "key": "field_68a2b77d090b4",
+                "label": "Hero Description",
+                "name": "hero_description",
+                "aria-label": "",
+                "type": "textarea",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "allow_in_bindings": 0,
+                "rows": "",
+                "placeholder": "",
+                "new_lines": ""
+            },
+            {
+                "key": "field_68a2b74c090b2",
+                "label": "Hero Badge",
+                "name": "hero_badge",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "allow_in_bindings": 0,
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_68a2b76d090b3",
+                "label": "Hero Title",
+                "name": "hero_title",
+                "aria-label": "",
+                "type": "textarea",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "allow_in_bindings": 0,
+                "rows": "",
+                "placeholder": "",
+                "new_lines": ""
+            },
+            {
+                "key": "field_68a2b78c090b5",
+                "label": "Hero Image",
+                "name": "hero_image",
+                "aria-label": "",
+                "type": "image",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": "",
+                "allow_in_bindings": 0,
+                "preview_size": "medium"
+            },
+            {
+                "key": "field_68a2cb4069a8f",
+                "label": "Hero Stats",
+                "name": "hero_stats",
+                "aria-label": "",
+                "type": "repeater",
+                "instructions": "Add stats like \"2+\", \"100K\", \"100%\" with their labels",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layout": "table",
+                "pagination": 0,
+                "min": 0,
+                "max": 0,
+                "collapsed": "",
+                "button_label": "Add Row",
+                "rows_per_page": 20,
+                "sub_fields": [
+                    {
+                        "key": "field_68a2cb5269a90",
+                        "label": "Number",
+                        "name": "number",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "allow_in_bindings": 0,
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "parent_repeater": "field_68a2cb4069a8f"
+                    },
+                    {
+                        "key": "field_68a2cb6569a91",
+                        "label": "Label",
+                        "name": "label",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "allow_in_bindings": 0,
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "parent_repeater": "field_68a2cb4069a8f"
+                    }
+                ]
+            },
+            {
+                "key": "field_68a2e5207a148",
+                "label": "Products Section",
+                "name": "",
+                "aria-label": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "left",
+                "endpoint": 0,
+                "selected": 0
+            },
+            {
+                "key": "field_68a2cb9a9ae2b",
+                "label": "Products Badge",
+                "name": "products_badge",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "OUR COLLECTION",
+                "maxlength": "",
+                "allow_in_bindings": 0,
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_68a2cbab9ae2c",
+                "label": "Products Title",
+                "name": "products_title",
+                "aria-label": "",
+                "type": "textarea",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "HOT SAUCE<br />ARSENAL",
+                "maxlength": "",
+                "allow_in_bindings": 0,
+                "rows": "",
+                "placeholder": "",
+                "new_lines": ""
+            },
+            {
+                "key": "field_68a2cbc59ae2d",
+                "label": "Products Description",
+                "name": "products_description",
+                "aria-label": "",
+                "type": "textarea",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "CRAFTED WITH PASSION AND THE FINEST INGREDIENTS, EACH SAUCE DELIVERS A UNIQUE FLAVOR EXPERIENCE THAT WILL ELEVATE YOUR MEALS TO NEW HEIGHTS.",
+                "maxlength": "",
+                "allow_in_bindings": 0,
+                "rows": "",
+                "placeholder": "",
+                "new_lines": ""
+            },
+            {
+                "key": "field_mission_tab",
+                "label": "Mission",
+                "name": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "left",
+                "endpoint": 0
+            },
+            {
+                "key": "field_mission_badge",
+                "label": "Mission Badge",
+                "name": "mission_badge",
+                "type": "text",
+                "instructions": "The badge text displayed at the top of the mission section (default: \"OUR MISSION\")",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "OUR MISSION",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_mission_title",
+                "label": "Mission Title",
+                "name": "mission_title",
+                "type": "wysiwyg",
+                "instructions": "The main title for the mission section. Use <span class=\"accent\"> for highlighting words (default: Making a<br /><span class=\"accent\">Difference</span>)",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Making a<br /><span class=\"accent\">Difference</span>",
+                "tabs": "all",
+                "toolbar": "basic",
+                "media_upload": 0,
+                "delay": 0
+            },
+            {
+                "key": "field_mission_nonprofit_text",
+                "label": "Not-for-Profit Statement",
+                "name": "mission_nonprofit_text",
+                "type": "textarea",
+                "instructions": "The opening statement about being a not-for-profit business",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "We are a not-for-profit business dedicated to creating positive change through every bottle we sell.",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": 3,
+                "new_lines": ""
+            },
+            {
+                "key": "field_mission_donation_heading",
+                "label": "Donation Heading",
+                "name": "mission_donation_heading",
+                "type": "text",
+                "instructions": "The text before the organization name (default: \"100% of profits go to\")",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "100% of profits go to",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_mission_org_name",
+                "label": "Organization Name",
+                "name": "mission_org_name",
+                "type": "text",
+                "instructions": "The name of the organization you're supporting (default: \"fullStop Australia\")",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "fullStop Australia",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_mission_org_url",
+                "label": "Organization URL",
+                "name": "mission_org_url",
+                "type": "url",
+                "instructions": "The website URL of the organization (opens in new tab)",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "https://fullstop.org.au/",
+                "placeholder": "https://"
+            },
+            {
+                "key": "field_mission_org_description",
+                "label": "Organization Description",
+                "name": "mission_org_description",
+                "type": "textarea",
+                "instructions": "Description of what the organization does and their mission",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "fullStop Australia is a leading organization working to end domestic, family and sexual violence. They provide vital support services, advocacy, and education to create safer communities for all Australians.",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": 4,
+                "new_lines": ""
+            },
+            {
+                "key": "field_mission_yearly_text",
+                "label": "Yearly Commitment Text",
+                "name": "mission_yearly_text",
+                "type": "textarea",
+                "instructions": "The text about selecting a new organization each year",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Each year, we carefully select a new organization to support, ensuring our impact reaches various causes that matter to our community.",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": 3,
+                "new_lines": ""
+            },
+            {
+                "key": "field_68a2e5517a149",
+                "label": "About Section",
+                "name": "",
+                "aria-label": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "left",
+                "endpoint": 0,
+                "selected": 0
+            },
+            {
+                "key": "field_68a2cbeb21b26",
+                "label": "About Badge",
+                "name": "about_badge",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "OUR STORY",
+                "maxlength": "",
+                "allow_in_bindings": 0,
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_68a2cc0421b27",
+                "label": "About Title",
+                "name": "about_title",
+                "aria-label": "",
+                "type": "textarea",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Born from<br />Passion",
+                "maxlength": "",
+                "allow_in_bindings": 0,
+                "rows": "",
+                "placeholder": "",
+                "new_lines": ""
+            },
+            {
+                "key": "field_68a2cc1c21b28",
+                "label": "About Content",
+                "name": "about_content",
+                "aria-label": "",
+                "type": "wysiwyg",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "BORN FROM A PASSION FOR BOLD FLAVORS AND QUALITY INGREDIENTS, OUR HOT SAUCE BRAND REPRESENTS THE PERFECT FUSION OF HEAT AND TASTE.\r\n\r\nWE SOURCE THE FINEST PEPPERS AND USE TRADITIONAL METHODS COMBINED WITH MODERN TECHNIQUES TO CREATE SAUCES THAT DON'T JUST BRING THE HEAT, THEY BRING THE FLAVOR.",
+                "allow_in_bindings": 0,
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 1,
+                "delay": 0
+            },
+            {
+                "key": "field_68a2cc4d21b29",
+                "label": "About Image",
+                "name": "about_image",
+                "aria-label": "",
+                "type": "image",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": "",
+                "allow_in_bindings": 0,
+                "preview_size": "medium"
+            },
+            {
+                "key": "field_68a2cc6021b2a",
+                "label": "Contact Badge",
+                "name": "contact_badge",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "GET IN TOUCH",
+                "maxlength": "",
+                "allow_in_bindings": 0,
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_68a2cc6c21b2b",
+                "label": "Contact Title",
+                "name": "contact_title",
+                "aria-label": "",
+                "type": "textarea",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Ready to<br />Ignite?",
+                "maxlength": "",
+                "allow_in_bindings": 0,
+                "rows": "",
+                "placeholder": "",
+                "new_lines": ""
+            },
+            {
+                "key": "field_68a2cca49ca6f",
+                "label": "Contact Description",
+                "name": "contact_description",
+                "aria-label": "",
+                "type": "textarea",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "HAVE QUESTIONS ABOUT OUR PRODUCTS OR WANT TO LEARN MORE? WE'D LOVE TO HEAR FROM YOU.",
+                "maxlength": "",
+                "allow_in_bindings": 0,
+                "rows": "",
+                "placeholder": "",
+                "new_lines": ""
+            },
+            {
+                "key": "field_68a2ccbd9ca70",
+                "label": "Contact Email",
+                "name": "contact_email",
+                "aria-label": "",
+                "type": "email",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "hello@hotsauce.co",
+                "allow_in_bindings": 0,
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_68a2ccd59ca71",
+                "label": "Contact Phone",
+                "name": "contact_phone",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "1800 HEAT-NOW",
+                "maxlength": "",
+                "allow_in_bindings": 0,
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page",
+                    "operator": "==",
+                    "value": "87"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "acf_after_title",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0,
+        "display_title": ""
+    }
+]

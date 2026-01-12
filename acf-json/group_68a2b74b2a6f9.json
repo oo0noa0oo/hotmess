@@ -259,6 +259,181 @@
             "new_lines": ""
         },
         {
+            "key": "field_mission_tab",
+            "label": "Mission",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_mission_badge",
+            "label": "Mission Badge",
+            "name": "mission_badge",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "The badge text displayed at the top of the mission section (default: \"OUR MISSION\")",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "OUR MISSION",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_mission_title",
+            "label": "Mission Title",
+            "name": "mission_title",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "The main title for the mission section. Use <span class=\"accent\"> for highlighting words (default: Making a<br \/><span class=\"accent\">Difference<\/span>)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Making a<br \/><span class=\"accent\">Difference<\/span>",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_mission_nonprofit_text",
+            "label": "Not-for-Profit Statement",
+            "name": "mission_nonprofit_text",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "The opening statement about being a not-for-profit business",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "We are a not-for-profit business dedicated to creating positive change through every bottle we sell.",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 3,
+            "new_lines": ""
+        },
+        {
+            "key": "field_mission_donation_heading",
+            "label": "Donation Heading",
+            "name": "mission_donation_heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "The text before the organization name (default: \"100% of profits go to\")",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "100% of profits go to",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_mission_org_name",
+            "label": "Organization Name",
+            "name": "mission_org_name",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "The name of the organization you're supporting (default: \"fullStop Australia\")",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "fullStop Australia",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_mission_org_url",
+            "label": "Organization URL",
+            "name": "mission_org_url",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "The website URL of the organization (opens in new tab)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "https:\/\/fullstop.org.au\/",
+            "placeholder": "https:\/\/"
+        },
+        {
+            "key": "field_mission_org_description",
+            "label": "Organization Description",
+            "name": "mission_org_description",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Description of what the organization does and their mission",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "fullStop Australia is a leading organization working to end domestic, family and sexual violence. They provide vital support services, advocacy, and education to create safer communities for all Australians.",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 4,
+            "new_lines": ""
+        },
+        {
+            "key": "field_mission_yearly_text",
+            "label": "Yearly Commitment Text",
+            "name": "mission_yearly_text",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "The text about selecting a new organization each year",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Each year, we carefully select a new organization to support, ensuring our impact reaches various causes that matter to our community.",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 3,
+            "new_lines": ""
+        },
+        {
             "key": "field_68a2e5517a149",
             "label": "About Section",
             "name": "",
@@ -468,24 +643,6 @@
             "placeholder": "",
             "prepend": "",
             "append": ""
-        },
-        {
-            "key": "field_68a2e59d7a14a",
-            "label": "About Section",
-            "name": "",
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "left",
-            "endpoint": 0,
-            "selected": 0
         }
     ],
     "location": [
@@ -506,5 +663,6 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1755506678
+    "display_title": "",
+    "modified": 1768198624
 }

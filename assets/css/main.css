@@ -670,6 +670,104 @@ p {
   width: 100%;
 }
 
+/* Mission Section */
+.mission-section {
+  padding: 6rem 0;
+  background: var(--color-accent);
+  color: var(--color-accent-foreground);
+  border-bottom: 4px solid var(--color-accent-foreground);
+}
+
+.mission-content {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.mission-badge {
+  display: inline-block;
+  background: var(--color-foreground);
+  color: var(--color-background);
+  padding: 0.75rem 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.mission-badge span {
+  font-family: var(--font-heading);
+  letter-spacing: 0.2em;
+}
+
+.mission-title {
+  font-size: clamp(2.5rem, 5vw, 6rem);
+  line-height: 1.1;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.mission-title .accent {
+  color: var(--color-foreground);
+}
+
+.mission-text {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.mission-nonprofit {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  font-weight: 500;
+  color: var(--color-accent-foreground);
+  text-transform: none;
+}
+
+.mission-donation {
+  background: var(--color-foreground);
+  border: 4px solid var(--color-foreground);
+  padding: 2.5rem;
+  text-align: left;
+}
+
+.mission-donation h3 {
+  font-size: 1.5rem;
+  line-height: 1.3;
+  margin-bottom: 1.5rem;
+  text-transform: none;
+  letter-spacing: 0.05em;
+  color: var(--color-background);
+}
+
+.mission-org-link {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.mission-org-link:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+.mission-donation p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--color-background);
+  text-transform: none;
+}
+
+.mission-yearly {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  font-style: italic;
+  color: var(--color-accent-foreground);
+  opacity: 0.9;
+  text-transform: none;
+}
+
 /* About Section */
 .about-section {
   padding: 6rem 0;

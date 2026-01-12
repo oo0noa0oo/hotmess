@@ -66,11 +66,11 @@ add_action('init', 'hotsauce_remove_product_elements');
 // Enhanced script enqueuing with proper dependencies
 function hotsauce_enqueue_assets() {
     // Main styles
-    wp_enqueue_style('hotsauce-main', get_template_directory_uri() . '/assets/css/main.css', [], '1.2.3');
-    wp_enqueue_style('hotsauce-woocommerce', get_template_directory_uri() . '/assets/css/woocommerce.css', ['hotsauce-main'], '1.2.3');
+    wp_enqueue_style('hotsauce-main', get_template_directory_uri() . '/assets/css/main.css', [], '2.0.0');
+    wp_enqueue_style('hotsauce-woocommerce', get_template_directory_uri() . '/assets/css/woocommerce.css', ['hotsauce-main'], '2.0.0');
 
     // Main JavaScript
-    wp_enqueue_script('hotsauce-main', get_template_directory_uri() . '/assets/js/main.js', ['jquery'], '1.2.3', true);
+    wp_enqueue_script('hotsauce-main', get_template_directory_uri() . '/assets/js/main.js', ['jquery'], '2.0.0', true);
     
     // WooCommerce integration
     if (class_exists('WooCommerce')) {
